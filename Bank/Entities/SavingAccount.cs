@@ -22,5 +22,12 @@ namespace Bank.Entities
             Balance += Balance * InterestRate;
         }
 
+        public override void WithDraw(double amount)
+        {
+            //Balance -= amount;
+            base.WithDraw(amount);
+            Balance -= 2.0;
+        }
+
     }
 }

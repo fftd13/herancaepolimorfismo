@@ -21,11 +21,11 @@ namespace Bank.Entities
             Balance = balance;
         }
 
-        public void WithDraw(double amount)
+        public virtual void WithDraw(double amount)
         {
             if(amount < Balance)
             {
-                Balance -= amount;
+                Balance -= amount + 5.0;
             }            
         }
 
